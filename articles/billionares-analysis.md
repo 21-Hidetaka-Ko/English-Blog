@@ -1,29 +1,30 @@
 
-Rのフロントエンドということで話題になっている、Exploratoryの対話的なデータ分析環境で「ヨーロッパはほんとに女性が活躍しやすい社会か」どうか分析してみた
+Billionares data analysis on Exploratory, UI for R — Is Europe women-friendly work environments true ?
 
 
 ![](images/excel-difficult.png)
 
+Do you have any idea about this spreed sheet data ? I don't think so.
 
-ぱっと見て、このデータがなんのデータかとかってわかりますか？　これだけ見ただけだとなんのデータかわからないですよね〜。
+Actually, this is billionares data all over the world which I downloaded from Forbes.
 
-これは実は、フォーブズ誌からダウンロードしてきた世界の億万長者についてのデータなんですね。
+Anyway, From what country are there the most people in that billionares? How come they become billionares ? Which are there more of, men or women?
 
-そもそも億万長者ってどの国に多いんですかね。また、億万長者ってどうやってなってるんですかね。はたまた、億万長者って男性と女性どちらのほうが多いのでしょうか？
-
-また、最近読んだ記事↓によると、ヨーロッパは女性が活躍しやすい社会だったりするそうです。だとすると、今、ヨーロッパには、女性の億万長者も多かったりするのでしょうか？
+As some articles which I recently read as the below, Europe seems women-friendly work environments. If it is true, Has Europe many women billionares?
 
 
 ![](images/europe-female.png)
 
 
-こんな疑問を、データ分析によって簡単に解決することができるプロダクトがあります。それが、ぼくが今、留学先であるシリコンバレーで関わっているExploratoryというプロジェクトです。簡単に説明すると、コマンドラインインターフェイスで、データ解析とビジュアライズが同時に、柔軟にできるソフトウェアです。技術的に書くと、RのフロントエンドにNW.js (WebKitベースのデスクトップアプリSDK)とplotly.js (D3.jsベースの可視化ライブラリ)を用いた対話的で再現性重視のデータ分析環境を提供します。
+Do, we have a product called Exploratory which can solve such some questions easily by analyzing data for you. I'm in the project's team in Silicon Valley. I'm grateful for being surrounded by great people who make me want to be better self everyday.Exploratory Desktop provides an interactive and reproducible real data wrangling and analysis experience powered by R and visualization.In terms of technology, Exploratory provides interactive and reproducible environments for analyzing data by using NW.js (desctop application SDK on WebKit) and plotly.js on frontend of R.
+
 
 
 ![](images/exploratory.lp.png)
 
-ちなみに、つい最近B版を正式にリリースしたばかり。世界中の反応はこんな感じです。
-Rの世界で１番影響力のあるHadley Wickhamさん（通称、羽鳥）がリツイートしてくれたり
+We released β version in May.
+
+Hadley Wickham, the most famaous in R retweeted our release.
 
 
 ![](images/Exploratory-tweet.png)
@@ -34,7 +35,7 @@ Rの世界で１番影響力のあるHadley Wickhamさん（通称、羽鳥）�
 
 ![](images/Exploratory-tweet4.png)
 
-世界中からアクセスが！
+Here is reaction around the world.
 
 
 ![](images/Exploratory-access.png)
