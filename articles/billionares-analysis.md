@@ -1,30 +1,29 @@
 
-Billionares data analysis on Exploratory, UI for R — Is Europe women-friendly work environments true ?
+#Billionares data analysis on Exploratory, UI for R — Is Europe women-friendly work environments true ?
 
 
 ![](images/excel-difficult.png)
 
 Do you have any idea about this spreed sheet data ? I don't think so.
 
-Actually, this is billionares data all over the world which I downloaded from Forbes.
+Actually, this is billionares data all over the world which I downloaded from Forbes.com.
 
 Anyway, From what country are there the most people in that billionares? How come they become billionares ? Which are there more of, men or women?
 
-As some articles which I recently read as the below, Europe seems women-friendly work environments. If it is true, Has Europe many women billionares?
+As some articles which I recently read as the below, Europe seems countries which have women-friendly work environments. If it is true, Has Europe many women billionares?
 
 
 ![](images/europe-female.png)
 
 
-Do, we have a product called Exploratory which can solve such some questions easily by analyzing data for you. I'm in the project's team in Silicon Valley. I'm grateful for being surrounded by great people who make me want to be better self everyday.Exploratory Desktop provides an interactive and reproducible real data wrangling and analysis experience powered by R and visualization.In terms of technology, Exploratory provides interactive and reproducible environments for analyzing data by using NW.js (desctop application SDK on WebKit) and plotly.js on frontend of R.
-
+Do, we have a product called Exploratory which can solve such some questions easily by analyzing data for you. I'm in the project's team in Silicon Valley. I'm grateful for being surrounded by great people who make me want to be better self everyday. Exploratory Desktop provides an interactive and reproducible real data wrangling and analysis experience powered by R and visualization. In terms of technology, Exploratory provides interactive and reproducible environments for analyzing data by using NW.js (desctop application SDK on WebKit) and plotly.js on frontend of R.
 
 
 ![](images/exploratory.lp.png)
 
 We released β version in May.
 
-Hadley Wickham, the most famaous in R retweeted our release.
+We excited that Hadley Wickham, the most famaous person in R retweeted our release.
 
 
 ![](images/Exploratory-tweet.png)
@@ -42,67 +41,91 @@ Here is reaction around the world.
 
 ![](images/Exploratory-access2.png)
 
-##ヨーロッパだと、女性の億万長者が多いのか？
 
-これからExploratoryでできることの紹介も兼ねて、冒頭で少し述べた、「今、ヨーロッパには、女性の億万長者も多かったりするのでしょうか？」という問いにデータの面から分析していきたいと思います。そして、その後に、考察したデータについて簡単な個人的な感想を述べています。
+###Target Audience: Data Scientists who can do basic R or Python or People Who Know Just Enough R or SQL to Get by
+Before I begin or Who are frustlating with Excel or Tabelow for analyzing data, I’d like to clarify who my target audience is.
 
-1. 準備
-2. それぞれの国における億万長者の男女の比率の計算
-3. 意味のあるデータにする
-4. ヨーロッパは女性が活躍しやすい社会なのか？
-5. おまけ
-6. 記録する、シェアする
-7. 最後に
+In this tutorial, I’m targeting the third group I mentioned: people who know just enough jQuery to get by or Who is frustlating with Excel or Tabelow for analyzing data. Examples of people who might fit in this category would be:
+
+- Data Scientists who can do basic R or Python.
+- Data Scientists Who are frustlating with Excel or Tabelow.
+- Beginning developers who have completed basic SQL tutorials online.
+- Beginner who want to learn R but don't know how to learn for their reserch or static needs.
+- Anyone who are interestead in gender problem like working environments.
+
+Anyways, let’s get started!
+
+###Time Estimate: 15 minutes
+
+If you go really fast, this tutorial should take a bit over 10 minutes. If you go slow, it should take a bit over 15 minutes.
+
+If you’re stuck
+If you’re stuck, do any of the following:
+
+- Comment on the comment box at the very bottom of this page.
+- Email me at hidetaka.koh@gmail.com.
+- Tweet me at [@SoccerKinki](https://twitter.com/SoccerKinki?lang=ja
+)
+
+##Overview: Has Europe many women billionares?
+
+Let's reveal the question whether Europe women-friendly work environments is true or not by analyzing data for introduction of Exploratory. After that, I state my impressions of data which I analyzed.
+
+STEP 1: Prepare Project before analyze
+STEP 2: Caluculate ratio of billionares for each countries
+STEP 3: Remove outliers
+STEP 4: Is Europe women-friendly work environments true
+STEP 5: One more thing
+STEP 6: Share by publishing Note.
+
+Finally: My Observations
 
 
-###1. 準備
+###STEP 1: Prepare Project before analyze
 
-まず、ここからプロジェクトを作ることができます。
+First of all, you can create projects from here.
 
 ![](images/create-project.png)
 
-次に、ここからデータをインポートできます。
+You can import data.
 
 ![](images/import.png)
 
 
-####サマリー画面
+####Summary View
 
 ![](images/summary-billionaire.png)
 ![](images/summary-billionaire2.png)
 
 
-すると、さっきはエクセルでなんのことかわからなかったデータが、インポートしただけでわかりやすくなりましたね。
-例えば、このcitizenshipというカラムは、その国の市民権を持っている億万長者の人の数を表しています。アメリカが一番多いことがひと目でわかります。selfmadeカラムは、selfmadeだと 自分の力（起業など）で億万長者になったことを意味し、inheritedだと親の相続で億万長者になっていることを意味しています。genderカラムを見てみると、女性より男性のほうが圧倒的に億万長者が多いことがわかりますね。
+Totally diffrent,right ? Thanks to Summary View, we can easily overview data which we can't recozinize in Excel data by importing. For example, this citizenship column represents the number of billionaires for each countries. As you can see, United States have the most billionaire all over the world at first glance. This selfmade column represents how come they become billionares. When you see gender column, you can understand men's billionaires is much more than women at first glance.
 
 
-まず、今のままだと正確なデータを分析していくことができません。なぜでしょうか？
+But, we can't analyze data precisely with the way it is now.　Why not ?
 
-yearカラムとnameカラムを見てみましょう。
+Let's see year column and name column.
 
 ![](images/year-name.png)
 
 
-yearカラムは、2014年、2000年、1996年の3つのデータが含まれていますね。
+Year column has data of the three years, 2014 and 2000 and 1996.
 次に、nameカラムを見てみると、例えば、Akira Moriさん（六本木の森ビルの人）の最後には、3となっていますね。これは、3回カウントされているということです。つまり、このデータにおいてAkira Moriさんは、2014年、2000年、1996年どの年度のときにも億万長者としてカウントされていたことを意味します。
 
-ぼくたちが知りたいのは、今のヨーロッパの億万長者についての情報であり、同じ人物が複数回カウントされていると意味のあるデータがとれなくなるので、最新の2014年以外のデータは排除する必要があります。
+What we want to know is imformation about billionaires in Europe now. Then, when same people like Bill Gates were count many time, we can't analyze data precisely. So, we need to delete other data except 2014 year.
 
-
-そういう場合、エクセルとかだと画面のどこかから、指定のカラム以外を排除する関数のボタンを探したりするのに対し、Exploratoryは＋アイコンを押すとデータを分析するためのコマンドの一覧が表示されるので、そこから選んだり、また自分でSQL文を書くように打ち込んでいくことも可能です。
+In such case, in contrast to Excel which I need to find where command like filter are, Exploratory enables us to chose functions from there or type command like SQL.
 
 ![](images/exploratory-command.png)
 
-また、それぞれのカラムの矢印の部分を押してコマンドを選択することも可能です。
+You can simply select command from the column header dropdown list, which will generate a command like below.
 
 ![](images/command-builder.png)
 
-
-2014年のデータだけにフィルタリングして見たいわけなので、カラムの矢印の部分を押して出てきたFilterを押します。
+Let's select ‘Filter’ from the column header dropdown list, which will generate a command like below because we want to filtering 2014's data.
 
 ![](images/filter-20140.png)
 
-すると自動的にfilter(year ==　)と打ち込まれます。そして、2014と指定してRunボタンを押します。
+Let's specify that year is 2014 and press run button.
 
 ![](images/filter-2014.png)
 
@@ -124,7 +147,7 @@ yearカラムは、2014年、2000年、1996年の3つのデータが含まれて
 つまり、Exploratoryでは、データをインポートしただけで、データの概要を直観的に理解することができるようになり、さらにデータ分析するうえで致命的なミスに気づいて、改善するところまでできました。
 
 
-###2. それぞれの国における億万長者の男女の比率の計算
+###STEP 2: Caluculate ratio of billionares for each countries
 
 ただし、「今、ヨーロッパには、女性の億万長者も多かったりするのでしょうか？」という問いに答えるためには、このグラフだけではまだ解決できていない問題があります。それは、それぞれのバーの高さが違うため、それぞれの国における億万長者の男女の比率がわからないことなんです。
 
