@@ -42,8 +42,7 @@ Here is reaction around the world.
 ![](images/Exploratory-access2.png)
 
 
-###Target Audience: Data Scientists who can do basic R or Python or People Who Know Just Enough R or SQL to Get by
-Before I begin or Who are frustlating with Excel or Tabelow for analyzing data, I’d like to clarify who my target audience is.
+###Target Audience: Data Scientists who can do basic R or Python or People Who Know Just Enough R or SQL to Get by or Who are frustlating with Excel or Tabelow for analyzing data, Before I begin, I’d like to clarify who my target audience is.
 
 In this tutorial, I’m targeting the third group I mentioned: people who know just enough jQuery to get by or Who is frustlating with Excel or Tabelow for analyzing data. Examples of people who might fit in this category would be:
 
@@ -71,14 +70,14 @@ If you’re stuck, do any of the following:
 
 Let's reveal the question whether Europe women-friendly work environments is true or not by analyzing data for introduction of Exploratory. After that, I state my impressions of data which I analyzed.
 
-STEP 1: Prepare Project before analyze
-STEP 2: Caluculate ratio of billionares for each countries
-STEP 3: Remove outliers
-STEP 4: Is Europe women-friendly work environments true
-STEP 5: One more thing
-STEP 6: Share by publishing Note.
+- STEP 1: Prepare Project before analyze
+- STEP 2: Caluculate ratio of billionares for each countries
+- STEP 3: Remove outliers
+- STEP 4: Is Europe women-friendly work environments true
+- STEP 5: One more thing
+- STEP 6: Share by publishing Note.
 
-Finally: My Observations
+- Finally: My Observations
 
 
 ###STEP 1: Prepare Project before analyze
@@ -117,7 +116,7 @@ In such case, in contrast to Excel which I need to find where command like filte
 
 ![](images/exploratory-command.png)
 
-You can simply select command from the column header dropdown list, which will generate a command like below.
+Moreover, You can simply select command from the column header dropdown list, which will generate a command like below.
 
 ![](images/command-builder.png)
 
@@ -125,26 +124,21 @@ Let's select ‘Filter’ from the column header dropdown list, which will gener
 
 ![](images/filter-20140.png)
 
-Let's specify that year is 2014 and press run button.
+Let's specify that year is 2014 and press Run button.
 
 ![](images/filter-2014.png)
 
-すると、yearが2014年だけになり、nameの回数も3から1になりましたね。
+Then, we can see only 2014's data in Summary View and the number of name become 1 from 3.
 
+In Chart View, we can intuitively understand data powered by visualization.
 
-チャート画面では、ビジュアライゼーションによってデータをより直観的に理解することができるようになります。
-
-
-それぞれの国ごとにおける性別のグラフを見たいので、X軸にcitizenship、colorにgenderを指定します。青はfemaleで、オレンジは、maleを表しています。
+Let's assign X axis to citizenship and color axis to gender. That is because we want to see graph of gender for each countries. Blue color represents female and orange color represents male.
 
 ![](images/chart-billionaire2.png)
 
+There are many billionaires and the ratio of men is overwhelmingly high higher than the ration of women in United States at first glance.By only this steps, Exploratory can make the chart so that we can understand data.
 
-億万長者は、アメリカ市民がたくさんいて、男性の比率が圧倒的に高いことがひと目でわかりますね。
-たったこれだけで、簡単なチャートを作ることができました。
-
-
-つまり、Exploratoryでは、データをインポートしただけで、データの概要を直観的に理解することができるようになり、さらにデータ分析するうえで致命的なミスに気づいて、改善するところまでできました。
+That is to say, Exploratory enable us to overview data easily and intuitively by just importing and realize mistake of data and fix it to analyze data.
 
 
 ###STEP 2: Caluculate ratio of billionares for each countries
