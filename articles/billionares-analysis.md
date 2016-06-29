@@ -23,7 +23,7 @@ Do, we have a product called Exploratory which can solve such some questions eas
 
 We released β version in May.
 
-We excited that Hadley Wickham, the most famaous person in R retweeted our release.
+We excited that Hadley Wickham, the most famaous person in R , retweeted our release.
 
 
 ![](images/Exploratory-tweet.png)
@@ -34,7 +34,7 @@ We excited that Hadley Wickham, the most famaous person in R retweeted our relea
 
 ![](images/Exploratory-tweet4.png)
 
-Here is reaction around the world.
+Here is many reactions around the world.
 
 
 ![](images/Exploratory-access.png)
@@ -42,12 +42,12 @@ Here is reaction around the world.
 ![](images/Exploratory-access2.png)
 
 
-###Target Audience: Data Scientists who can do basic R or Python or People Who Know Just Enough R or SQL to Get by or Who are frustlating with Excel or Tabelow for analyzing data, Before I begin, I’d like to clarify who my target audience is.
+###Target Audience: Data Scientists who can do basic R or Python or People Who Know Just Enough R or SQL to Get by or Who are frustlating with Excel or Tabelow for analyzing data,
 
-In this tutorial, I’m targeting the third group I mentioned: people who know just enough jQuery to get by or Who is frustlating with Excel or Tabelow for analyzing data. Examples of people who might fit in this category would be:
+Before I begin, I’d like to clarify who my target audience is.In this tutorial, I’m targeting the third group I mentioned: people who know just enough jQuery to get by or Who is frustlating with Excel or Tabelow for analyzing data. Examples of people who might fit in this category would be:
 
-- Data Scientists who can do basic R or Python.
-- Data Scientists Who are frustlating with Excel or Tabelow.
+- Data Scientists or Analyst who can do basic R or Python.
+- Data Scientists or Analyst Who are frustlating with Excel or Tabelow.
 - Beginning developers who have completed basic SQL tutorials online.
 - Beginner who want to learn R but don't know how to learn for their reserch or static needs.
 - Anyone who are interestead in gender problem like working environments.
@@ -80,7 +80,7 @@ Let's reveal the question whether Europe women-friendly work environments is tru
 - Finally: My Observations
 
 
-###STEP 1: Prepare Project before analyze
+###STEP 1: Prepare Project Before Analyze
 
 First of all, you can create projects from here.
 
@@ -97,7 +97,7 @@ You can import data.
 ![](images/summary-billionaire2.png)
 
 
-Totally diffrent,right ? Thanks to Summary View, we can easily overview data which we can't recozinize in Excel data by importing. For example, this citizenship column represents the number of billionaires for each countries. As you can see, United States have the most billionaire all over the world at first glance. This selfmade column represents how come they become billionares. When you see gender column, you can understand men's billionaires is much more than women at first glance.
+Totally diffrent,right ? Thanks to Summary View, we can easily overview data which we can't recozinize in Excel data by importing. For example, this citizenship column represents the number of billionaires for each countries. As you can see, United States have the most billionaire all over the world. This selfmade column represents how come they become billionares. When you see gender column, you can understand men's billionaires is much more than women at first glance.
 
 
 But, we can't analyze data precisely with the way it is now.　Why not ?
@@ -110,9 +110,9 @@ Let's see year column and name column.
 Year column has data of the three years, 2014 and 2000 and 1996.
 次に、nameカラムを見てみると、例えば、Akira Moriさん（六本木の森ビルの人）の最後には、3となっていますね。これは、3回カウントされているということです。つまり、このデータにおいてAkira Moriさんは、2014年、2000年、1996年どの年度のときにも億万長者としてカウントされていたことを意味します。
 
-What we want to know is imformation about billionaires in Europe now. Then, when same people like Bill Gates were count many time, we can't analyze data precisely. So, we need to delete other data except 2014 year.
+What we want to know is imformation about billionaires in Europe now. Then, when same people like Bill Gates were count many time, we can't analyze data precisely. So, we need to delete other data except 2014's year.
 
-In such case, in contrast to Excel which I need to find where command like filter are, Exploratory enables us to chose functions from there or type command like SQL.
+In such case, in contrast to Excel which I need to find where function like filter are, Exploratory enables us to chose command from there or type code like SQL.
 
 ![](images/exploratory-command.png)
 
@@ -136,36 +136,37 @@ Let's assign X axis to citizenship and color axis to gender. That is because we 
 
 ![](images/chart-billionaire2.png)
 
-There are many billionaires and the ratio of men is overwhelmingly high higher than the ration of women in United States at first glance.By only this steps, Exploratory can make the chart so that we can understand data.
+There are many billionaires and the ratio of men is overwhelmingly higher than the ratio of women in United States.By only this steps, Exploratory can make the chart so that we can understand data.
 
 That is to say, Exploratory enable us to overview data easily and intuitively by just importing and realize mistake of data and fix it to analyze data.
 
 
-###STEP 2: Caluculate ratio of billionares for each countries
+###STEP 2: Caluculate the ratio of billionares for each countries
 
-ただし、「今、ヨーロッパには、女性の億万長者も多かったりするのでしょうか？」という問いに答えるためには、このグラフだけではまだ解決できていない問題があります。それは、それぞれのバーの高さが違うため、それぞれの国における億万長者の男女の比率がわからないことなんです。
+Note that to answer the question which is "Has Europe many women billionares?", we have another problem. We don't know the ratio of billionares between man and woman for each countries because the height of each bar is diffrent.
 
-だから、それぞれの国における女性の比率を計算してだしてみたいと思います。
+That's why, We want to caluculate the ratio of woman billionares for each countries.
 
-まず、テーブル画面に行くと、エクセルのような形で行形式でデータを見ることができます。
+At First, We can quickly see the data as table like Excel by going to Table view.
 
 ![](images/table-billionaire.png)
 
 
-citizenship(どの国）とgender（男女）の関係について知る必要があるので両者をグルーピングします。グルーピングするには、Group_byを使うとできます。
-先ほどと同じように、citizenshipの矢印の部分を押します。
+We can group citizenship and gender because we need to know the relationship between citizenship and gender by using 'group_by' command. You can construct this command from the column header menu like below.
 
 ![](images/command-builder2.png)
 
-Group byをクリックします。
+Click 'Group by' which will generate a command like below. Add 'gender' separating them by comma.
+Here is the final command we want to run.
+
+`group_by(citizenship, gender)`
 
 ![](images/command-builder3.png)
 
-すると、group_by(citizenship)と自動的に入力されます。これにgender（男女）を加えます。
+citizenshipとgenderがグルーピングされていることを確認できますね。
 
 ![](images/group_by-gender.png)
 
-citizenshipとgenderがグルーピングされていることを確認できますね。
 
 さて、これから比率をだしていくためには男女のそれぞれの人数を男女の合計で割り算をする必要があります。だから、まず、それぞれの国でそれぞれの性別が何人いるかを表すcountって名前のカラムを作ります。カラムを統合して新しいカラムを作るときは、集計を意味するsummerizeという関数を使います。
 
@@ -318,7 +319,7 @@ Exploratoryでは、どんどん分析のためのステップ足していくこ
 
 
 
-####よくある質問
+####FAQ
 
 - 今回は、棒グラフしか使いませんでしたが、棒グラフ以外のグラフタイプもサポートしています。
 ![](images/several-chart.png)
@@ -336,15 +337,16 @@ Exploratoryでは、どんどん分析のためのステップ足していくこ
 ![](images/flight-stats27.png)
 
 
-##興味を持っていただいた方、実際に触ってみたい方へ
+##Beta invitation is open
 
-Exploratoryは[こちら](http://docs.exploratory.io/tutorials/flight4.html
-)からβ版の登録ができます。こちらがinviteを完了すると、ダウンロードできるようになります。
+This is still our beta version and we’re just getting started. So there could be some places you might find unpolished, but we would love to hear what you think of it. You can sign up for the beta access from [this page](https://exploratory.io/
+)
 
-チュートリアルは[こちら](http://docs.exploratory.io/tutorials/intro.html
-)から見ることができます。
+You can see our tutorial for Exploratory form [this page](http://docs.exploratory.io/tutorials/intro.html
+)
 
-英語が読める方は[Introducing Exploratory Desktop — UI for R](https://blog.exploratory.io/introducing-exploratory-desktop-ui-for-r-895d94ef3b7b#.4dncgv1rt
-)もどうぞ
+[Introducing Exploratory Desktop — UI for R](https://blog.exploratory.io/introducing-exploratory-desktop-ui-for-r-895d94ef3b7b#.4dncgv1rt
+) is good article, too!
+
 
 
