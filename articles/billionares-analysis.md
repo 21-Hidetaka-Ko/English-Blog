@@ -1,5 +1,5 @@
 
-#Billionares data analysis on Exploratory, UI for R — Is Europe women-friendly work environments true ?
+#Excel and Tabelow is dead. Billionares data analysis on Exploratory, UI for R — Is Europe women-friendly work environments true ?
 
 
 ![](images/excel-difficult.png)
@@ -152,30 +152,38 @@ At First, We can quickly see the data as table like Excel by going to Table view
 ![](images/table-billionaire.png)
 
 
-We can group citizenship and gender because we need to know the relationship between citizenship and gender by using 'group_by' command. You can construct this command from the column header menu like below.
+We can group citizenship and gender because we need to know the relationship between citizenship and gender by using 'group_by' command. You can construct this command from the column header menu like below. Click 'Group by' which will generate a command like below.
 
 ![](images/command-builder2.png)
 
-Click 'Group by' which will generate a command like below. Add 'gender' separating them by comma.
-Here is the final command we want to run.
+Add 'gender' separating them by comma.Here is the final command we want to run.
 
 `group_by(citizenship, gender)`
 
 ![](images/command-builder3.png)
 
-citizenshipとgenderがグルーピングされていることを確認できますね。
+You can confirm that citizenship and gender was grouped like below.
 
 ![](images/group_by-gender.png)
 
+Anyway, We need to divide each of the number of men and women by the total of men and women to calculate the ratio. That's why we want to create a column called 'count' which represents each of the number of men and women for each country. You can create new column and aggregate the data by using 'summerize' command.
 
-さて、これから比率をだしていくためには男女のそれぞれの人数を男女の合計で割り算をする必要があります。だから、まず、それぞれの国でそれぞれの性別が何人いるかを表すcountって名前のカラムを作ります。カラムを統合して新しいカラムを作るときは、集計を意味するsummerizeという関数を使います。
 
-カーソルを動かしながらこういったいろんなファンクションが用意されています。いつもこうやってどういうカラム名、ファンクションを出したらいいのかっていうのを絶えずこのアプリケーションがチェックしてるのでいつもそのときに適したリストがレコメンドされてでてくるんです。
+To make the command line interface work effectively and easier for anyone We have ‘Context aware syntax suggestion’ which recommend a set of list for function or column because Exploratory Desktop always check which column or function is good in this context like below.
+
+So, you don't have to google the mean for functions which you don't know.
 
 ![](images/recommend-billionaire.png)
 
 
-例えば、この時に出てくるリストは、summerize（集計）のときにだけ使えるリストです。だから、ユーザーはどこで何のfunctionを使わないといけないかを覚えておく必要はないんです。また、右に関数の説明や例が表示されるので、関数の意味をGoogleで調べる必要もありません。平均を出したい場合は、mean関数を使えばいいし、合計を出したいならsum関数が使えます。今回はcountしたいので、そのときは、n関数を使います。
+For example, here you will see a set of ‘aggregate’ functions that can be used in ‘summarize()’ command. If you are not familiar with R, as you can see, this ‘all’ function can be used to return TRUE if the condition is satisfied for all the rows or a group of rows. You can use mean function in case of average or sum function in case of total.
+
+This ‘Context aware syntax suggestion’ is actually a pretty powerful feature in Exploratory Desktop, please take a look at [this post](https://blog.exploratory.io/context-aware-syntax-suggestion-d52519c55cf8#.n83k4wes0
+) for the detail.
+
+
+By the way, let's use 'n' function because we want to count in this case.
+
 
 ![](images/summarize-billionaire.png)
 
@@ -282,9 +290,13 @@ Pinというボタンを押すと、一番最後にfilterした部分が青く�
 
 こんなふうにブログを書く感覚で簡単にデータ分析のレポートを書くことができます。データ分析するだけじゃなくて、他の仲間にも簡単にシェアすることもできます。
 
+##Excel is dead. Why Exploratory is Exploratory?
+
 この最初からの一連のステップをExcelですることを想像できるでしょうか？笑
 
-Exploratoryでは、どんどん分析のためのステップ足していくこともできるし、途中で修正することもできます。どんなデータ分析をするときも、いつも指定の場所からコマンドを打つことができるので、Rの文法さえ覚えてしまえばこんなに簡単にいろんなデータをいろんな角度から見ていくことができるんです。
+The reason we at Exploratory get up every morning being excited is because we have a chance to address this decades old (if not hundreds) challenge that is slowing down our society to progress. We want Exploratory Desktop to be an environment where we can focus on analyzing the data, asking questions about the data, and wrangling with the data to explore possible answers, without much worrying about the processes or how to make it reproducible for later use. And of course, we want Exploratory Desktop to take care of making all the exploratory works reproducible behind the scene just in case we might need it later!
+
+
 
 ##7. 最後に
 
