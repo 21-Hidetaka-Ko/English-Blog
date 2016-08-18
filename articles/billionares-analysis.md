@@ -10,7 +10,7 @@ Actually, this is billionares data all over the world which I downloaded from Fo
 
 Anyway, From what country are there the most people in that billionares? How come they become billionares ? Which are there more of, men or women?
 
-As some articles which I recently read as the below, Europe seems countries which have women-friendly work environments. If it is true, Has Europe many women billionares?
+As some articles which I recently read like below, Europe seems countries which have women-friendly work environments. If it is true, Has Europe many women billionares?
 
 
 ![](images/europe-female.png)
@@ -86,7 +86,7 @@ First of all, you can create projects from here.
 
 ![](images/create-project.png)
 
-You can import data.
+You can import data. Dataset is [here](https://www.dropbox.com/home?preview=Billionaires.xlsx). You can download.
 
 ![](images/import.png)
 
@@ -156,7 +156,7 @@ We can group citizenship and gender because we need to know the relationship bet
 
 ![](images/command-builder2.png)
 
-Add 'gender' separating them by comma.Here is the final command we want to run.
+Add 'gender' separating them by comma. Here is the final command we want to run.
 
 `group_by(citizenship, gender)`
 
@@ -188,97 +188,102 @@ By the way, let's use 'n' function because we want to count in this case.
 ![](images/summarize-billionaire.png)
 
 
-例えば、オーストラリアを見て下さい。femaleが4人で、maleが25人になっています。女性の比率を求めるには、男女の合計である29人を女性の4人で割ったらいいですよね？　だから、まず合計を意味するtotalカラムを作ってみましょう。新しいカラムを作るために、今回はmutateコマンドを使います。なぜ今回は、前回のようにsummerizeではなく、mutateなのか？
+Look at Australia! They have 4 female and 25 male. To caluculate the ratio of woman, we need to divide 29 man and female by 4 female, don't we ? That's why let's make new column called total. To make new column, we can use 'mutate'. Why do I need to use 'mutate', not summerize like previous case in this case. I have an answer for you. The difference is when we aggregate many row in case of summerize and make new column with same row in case of mutate.
 
-違いは、行をまとめるときは、さっきのようにsummerizeを使います。それに対し、mutateの場合は、この行のまま新しいカラムを作りたいときに計算をするときに使います。
 
-今回は、それぞれの行を残しながら計算をしたいのでmutateを使います。そして、合計を出すsum関数を使います
+Let's 'mutate' commmand in this case because we want to left each row. And, we can use 'sum' function to caluculate total.
 
 ![](images/total-billionaire.png)
 
-合計を表すカラムが作れたので、次は、それを基に比率を表すratioというカラムを作りましょう。countカラムをtotalカラムで割り算をすると、比率を出すことができます。
+Let's create the ratio column because we can create total column. When we divide count column by total, we can caluculate the ratio.
 
 ![](images/ratio-billionaire.png)
 
-0.1379や0.8621となっていてわかりにくいので、確率なので100倍します。
+Let's make 100 times because of 0.1379 and 0.8621.
 
 ![](images/ratio-billionaire2.png)
 
-オーストラリアでは、億万長者のうち、約13%が女性で、約86%が男性ということです。
-これで、それぞれの国における億万長者の男女の比率を計算して求めることができました。
+That's why we understand Men and women of the ratio of the billionaire in each of the country.
 
+13% of Billionaires is women and 86% of Billionaires is Men in Australia.
 
-###3. 意味のあるデータにする
+###3. Remove outliers
 
-テーブルだけだといまいちわからないので、もっとビジュアライズ化して直観的に理解できるようにチャート画面に行ってみましょう。
-X軸にcitizenshipをY軸にratioをcolorにgenderを指定します。
+Let's go to chart view to understand data more intuitively by visualization.
+
+Let's assign citizenship to X-axis and ratio to Y-axis and gender to color-axis.
 
 ![](images/chart-billionaire3.png)
 
-女性の億万長者の比率が圧倒的に高い国は、Angola（アンゴラ）になっています。
+the highest female billionaire ratio is Angola as you can see.
 
-では、Angola（アンゴラ）が本当に世界で一番女性の億万長者の比率が高い国であると言えるのでしょうか？
+Then, Do you say that Angola is country that have the highest female billionaire ratio all over the world ?
 
-テーブル画面に行ってみましょう。
+Let's go to Table view to understand situation.
+
 ![](images/angola.png)
 
-Angola（アンゴラ）の億万長者の合計人数は1人でその1人は女性になっています。つまり、母集団の数が少なすぎるため意味のあるデータではなくなっているのです。意味の有るデータにするために母集団の数にフィルタリングをかけましょう。ここでは、５人以上にフィルタリングします。
+
+Total number of billionaires in Angola is only 1 and woman. In other words, There is not enough peripheral data because the number of population is too small. So, Let's filter the number of population.
 
 ![](images/filter-total.png)
 
-これで、totalが5人以上の国しか表示されなくなりましたね。
 
-###4. ヨーロッパは女性が活躍しやすい社会なのか？
+There is only countries which have more than 5 the number of population like above.
 
-この状態で、チャート画面にもう一度行ってみます。
+###4. Conculsion: Is Europe women-friendly work environments true ?
+
+Let's go to chart view to understand data more intuitively by visualization.
 
 ![](images/chart-billionaire4.png)
 
-女性の億万長者が多い国は、順に見ていくと、チリ、スイス、オランダ、ペルー、ドイツ、フランス、デンマークとなっていて、確かにヨーロッパが多くなっていますね。
+High female billionaire ratio countries are European like Chile, Switzerland, Holland, Peru, Germany, France, Denmark as you can see.
 
-最初に少し述べた、どうやって億万長者になったかを表すselfmadeというカラムを覚えていますか？　このカラムを使って、相続で億万長者になった場合と、自力で億万長者になった国に違いがあるのか見てみましょう。なので、最初のyearを指定したFilterのステップに戻りたいと思います。
+Do you remember selfmade column that means how come they become billionares as I told before ? By using this column, let's see the diffrence between by income and by myself. So, I want to come back Filter step which assigned year at first.
 
 ![](images/filter-selfmade.png)
 
-あれ、Filterのステップに戻るとY軸のratioが外れ、チャートの様子も変わってしまいましたね。これは、今青くなっているFilterのステップの時点では、ratioカラムは存在していないからなんです。この問題を防ぐために、Pinボタンというのがあります。
+
+Oh... When I back to filter step, Ratio in Y-axis come off and chart is diffrent from previous one. That is because ratio column doesn't exist at the time of filter step which is blue. That's why Pin button is here for this problem.
 
 ![](images/pin-billionaire.png)
 
-Pinというボタンを押すと、一番最後にfilterした部分が青くなりましたよね？この青くなった最後のステップのデータにこのチャートは固定されてます。この状態で、Filterのステップに戻ってみると・・・
+
+When you click the Pin button, the part which you filter in the last became blue. The chart is fixed to the last blue step. Then, When you come back to filter step in the first with this status, you can see like below.
 
 ![](images/pin-billionaire2.png)
 
 
-今ここでSTEPを移動しましたけど、Pinしているので、この青くなっているSTEPにチャートを固定しながら、過去のSTEPを更新できるようになりました。
-この状態で、相続で億万長者になった人だけにフィルタリングしたいと思います。
+Although we change the step now, we can update the past step while fixxing the chart to this blue step because I Pin this step. Then, let's filter only billionares by income.
 
 ![](images/filter-inherited.png)
 
-相続で億万長者になった女性の多い国は、オーストラリア、チリ、フランス、ドイツ、ブラジル、スペイン、スウェーデン、スイスとやっぱりヨーロッパが多くなっていますね。
+Women of billionaire many countries by income are European countries like Australia, Chile, France, Germany, Spain, Sweaden, Switzerland as you can see.
 
-次に、自力で億万長者になった人（selfmade）だけにフィルタリングしたいと思います。
+
+And, let's filter only billionares by selfmade.
 
 
 ![](images/filter-selfmade2.png)
 
 
-なんか国が一気に減ってしまいましたね。自力で億万長者になった女性の多い国はスイスとアメリカが少しいるくらいになっています。さっきのフランスやドイツなどのヨーロッパを中心とした国々は消えてしまいましたね。
-
-つまり、確かに、ヨーロッパには女性の億万長者の数は世界的に見ても多いです。しかし、ヨーロッパの女性の億万長者のほとんどが、親族からの相続なのです。自力で億万長者になった女性はあまりいません。だから、「ヨーロッパは女性が活躍しやすい社会」であるとは一概に言うことはできないかもしれません。
+Wow! Many countries decrease suddenly. That is really interesting! Women of billionaire many countries by selfmade are only US and Switzerland. Many European countries like France and Geramany decrease now.
 
 
-##5. おまけ
+In conclusion, of course the number of woman of billionaire in Europe is many compared to other countries. But, this is critical thing, Many of women of billionaireis in Europe is by income. There are less of woman of billionaireis in Europe is by selfmade. That's why Europe women-friendly work environments is not necessary true.
 
-これでもうほとんど終わりなんですけど、最後に１つだけ見せたい機能があるんです。これは技術的にもけっこう面白い機能で、なんで右のようなステップになっているのかっていうのがもっと理解してもらえると思います。
 
-いまはgender（性別）のratio（比率）を見てますけど、そうじゃなくてindustry（産業）ごとのratioを見てみたいと思いませんか？　そういうときは、groupingのSTEPに行って、ひとつ変えるだけですぐできるんです。じゃあGroupingに行ってみましょう。
+##5. One more thing
+
+
+This tutorial almost done. But, I want to show one more system for you. This is really interesting in term of technical point. And, you will understand why right step is.Although we can see the ratio per gender, in the next step, why don't see the ratio per industry ? Then, you can see by back to step for grouping and change just one command. So, let's go the step!
 
 ![](images/onemorething-billionaire.png)
 
-このチャートは、一番最後の青くなっているところにピンされているんですけどいまGroupingを更新したらその結果を自動的に一番最後まで実行してチャートのデータを出すことができるんですよ。
+Although this chart is pinned to the last blue step, Exploratory can automatically caluculate and vizualize the data when you update grouping step.
 
 
-##6. 記録する、シェアする
+##6. Sharing Chart in Reproducible and Collaborative Way
 
 この発見を記録したり、シェアしたいと思いませんか？　Noteというボタンを押してみましょう。
 
@@ -298,7 +303,7 @@ The reason we at Exploratory get up every morning being excited is because we ha
 
 
 
-##7. 最後に
+##7. Making the World Better for Working Women
 
 留学先である、人材の流動性が高いシリコンバレーは実力主義のイメージが強いですが、仮にそうだとすると、次のデータはどう説明すればいいのでしょうか。[ソース](https://medium.com/diversify-tech/i-m-a-white-guy-in-silicon-valley-and-i-m-done-buying-the-meritocracy-myth-2cc0ef9f9b60#.lql629j9y)
 
@@ -313,10 +318,12 @@ The reason we at Exploratory get up every morning being excited is because we ha
 
 
 だから、ぼくの留学先であるシリコンバレーでは、女性エンジニアが少ないから、女性エンジニアを増やそうという動きが出てきています。ついこないだ、女性のコンピュータサイエンス教育によってジェンダーギャップを失くそうとしている[She++](http://www.sheplusplus.org/
-)という団体がスタンフォード大学でカンファレンス的なのをしていたので見に行ったりしてました。
+)という団体がスタンフォード大学でカンファレンス的なのをしていたので見に行ったりしてました。They insisted “Maybe Womand don’t want to fall behind in their career when they’re pregnant. But She++ think learning to code is so much more practical. You can work remotely as a programmer too, while raising a kid.”
 
 
 ![](images/she++.png)
+
+It’s challenging to be a working woman in Japan, my home country, too. The Economist recently presented their “glass-ceiling index,” which placed Japan among OECD countries with the largest gender gaps in their workplaces. For many Japanese women, returning to the workplace after having a child is often an insurmountable task. Japan should learn from She++, I think.
 
 
 社会的に恵まれている人たちの中でも、実力主義を宗教のように信じている人たちは、実力の劣る人たちを見て「努力不足だ」と蔑むことはしても、男女の問題など、その後ろにある社会の不平等に気付かないことが多い気がします。完全な実力主義社会など存在しないことを、忘れてはいけません。
@@ -361,4 +368,5 @@ You can see our tutorial for Exploratory form [this page](http://docs.explorator
 ) is good article, too!
 
 
+Thanks for reading. I’d appreciate a click on the “Recommend” button at the end if you liked this article.
 
