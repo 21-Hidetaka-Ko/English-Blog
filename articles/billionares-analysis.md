@@ -8,11 +8,11 @@ Do you have any idea about this spread sheet data ?
 
 Actually, this is billionaires data all over the world which I downloaded from Forbes.com.
 
-Anyway, I come up with a few questions about this data now. For example,
+Anyway, you may come up with a few questions about this data now. For example,
 
-1.Which country has the highest number billionaire ?
-2.How come they become billionaires ?
-3.Which are there more of, men or women?
+- 1.Which country has the highest number billionaire ?
+- 2.How come they become billionaires ?
+- 3.Which are there more of, men or women?
 
 Moreover, as some articles which I recently read in Japanese, Europe seems countries which have women-friendly work environments. If it is true, Has Europe many women billionaires?
 
@@ -23,38 +23,39 @@ Do, we have a product called Exploratory which can solve such some questions eas
 
 We released β version in May.
 
-We excited that Hadley Wickham, the most famaous person in R , retweeted our release.
+We excited that Hadley Wickham, the most famous person in R, retweeted our release.
 
 
 ![](images/Exploratory-tweet.png)
 
-![](images/Exploratory-tweet2.png)
 
-![](images/Exploratory-tweet3.png)
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr"><a href="https://twitter.com/KanAugust">@KanAugust</a> 1/ this could be a game changer. Especially with <a href="https://twitter.com/hashtag/teaching?src=hash">#teaching</a> <a href="https://twitter.com/hashtag/datascience?src=hash">#datascience</a> <a href="https://twitter.com/hashtag/science?src=hash">#science</a> highlights good/bad practices/data v quickly</p>&mdash; Stephen Newhouse (@s_j_newhouse) <a href="https://twitter.com/s_j_newhouse/status/729327017037053956">2016年5月8日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-![](images/Exploratory-tweet4.png)
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr"><a href="https://twitter.com/KanAugust">@KanAugust</a> Exploratory.io Love it!. Everyone with data should get it: students/teachers and all <a href="https://t.co/f4I6bCLxRi">https://t.co/f4I6bCLxRi</a>  <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a></p>&mdash; Stephen Newhouse (@s_j_newhouse) <a href="https://twitter.com/s_j_newhouse/status/729326373454680064">2016年5月8日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Here is many reactions around the world.
+Here are many reactions around the world.
 
 
 ![](images/Exploratory-access.png)
 
 
-###Target Audience: Data Scientists who can do basic R or Python or People Who Know Just Enough R or SQL to Get by or Who are frustlating with Excel or Tabelow for analyzing data,
+###Target Audience: Data Scientists who can do basic R or Python or People Who Know Just Enough R or SQL to Get by or Who are frustrating with Excel or Tabelow for analyzing data,
 
-Before I begin, I’d like to clarify who my target audience is.In this tutorial, I’m targeting the third group I mentioned: people who know just enough jQuery to get by or Who is frustlating with Excel or Tabelow for analyzing data. Examples of people who might fit in this category would be:
+Before I begin, I’d like to clarify who my target audience is.In this tutorial, I’m targeting the third group I mentioned: people who know just enough R or SQL to get by or Who is frustrating with Excel or Tabelow for analyzing data. Examples of people who might fit in this category would be:
 
 - Data Scientists or Analyst who can do basic R or Python.
-- Data Scientists or Analyst Who are frustlating with Excel or Tabelow.
+- Data Analysts or Analyst Who are frustrating with Excel or Tabelow.
 - Beginning developers who have completed basic SQL tutorials online.
-- Beginner who want to learn R but don't know how to learn for their reserch or static needs.
-- Anyone who are interestead in gender problem like working environments.
+- A Beginner who want to learn R but don't know how to learn for their research or static needs.
+- Anyone who is interested in gender problem like working environments.
 
-Anyways, let’s get started!
+Anyway, let’s get started!
 
 ###Time Estimate: 15 minutes
 
-If you go really fast, this tutorial should take a bit over 10 minutes. If you go slow, it should take a bit over 15 minutes.
+If you go fast, this tutorial should take a bit over 10 minutes. If you go slow, it should take a bit over 15 minutes.
 
 If you’re stuck
 If you’re stuck, do any of the following:
@@ -68,18 +69,18 @@ If you’re stuck, do any of the following:
 
 To demonstrate, I’m going to use billionaires data. I’ve shared it in EDF (Exploratory Data Format) [here]() so that you can quickly import with ‘Import Exploratory Data’ option. If you are interested in the original data you can download it from [here](https://www.dropbox.com/home?preview=Billionaires.xlsx) as well.
 
-##Overview: Has Europe many women billionares?
+##Overview: Has Europe many women billionaires?
 
-Let's reveal the question whether Europe women-friendly work environments is true or not by analyzing data for introduction of Exploratory. After that, I state my impressions of data which I analyzed.
+Let's reveal the question whether Europe women-friendly work environments are real or not by analyzing data for the introduction of Exploratory. After that, I state my impressions of data which I analyzed.
 
 - STEP 1: Prepare Project before analyze
-- STEP 2: Caluculate ratio of billionares for each countries
+- STEP 2: Calculate ratio of billionaires for each country
 - STEP 3: Remove outliers
-- STEP 4: Is Europe women-friendly work environments true
+- STEP 4: Is Europe women-friendly work environments real
 - STEP 5: One more thing
-- STEP 6: Share by publishing Note.
+- STEP 6: Sharing the Chart in Reproducible and Collaborative Way
 
-- Finally: My Observations
+- Finally: Making the World Better for Working Women
 
 
 ###STEP 1: Prepare Project Before Analyze
@@ -88,7 +89,7 @@ First of all, you can create projects from here.
 
 ![](images/create-project.png)
 
-You can import data. Dataset is [here](https://www.dropbox.com/home?preview=Billionaires.xlsx). You can download.
+You can import data. The dataset is [here](https://www.dropbox.com/home?preview=Billionaires.xlsx). You can download.
 
 ![](images/import.png)
 
@@ -97,30 +98,27 @@ You can import data. Dataset is [here](https://www.dropbox.com/home?preview=Bill
 
 ![](images/summary-billionaire.png)
 
-Totally diffrent,right ? Thanks to Summary View, we can easily overview data which we can't recozinize data in Excel by importing. For example, this citizenship column represents the number of billionaires for each countries. As you can see, United States have the most billionaire all over the world. This selfmade column represents how come they become billionares. When you see gender column, you can understand men's billionaires is much more than women at first glance.
+Totally different,right ? Thanks to Summary View, we can quickly overview data which we can't recognize data in Excel by importing. For example, this citizenship column represents the number of billionaires for each country. As you can see, United States have the most billionaire all over the world. This self-made column represents how come they become billionaires. When you see gender column, you can understand men's billionaires is much more than women at first glance.
 
 
-But, we can't analyze data precisely with the way it is now.　Why not ?
+But, we can't analyze data precisely with the way it is now.　Why not?
 
-Let's see year column and name column.
+Let's see year column and the name column.
 
 ![](images/year-name.png)
 
 
-Year column has data of the three years, 2014 and 2000 and 1996.
-次に、nameカラムを見てみると、例えば、Akira Moriさん（六本木の森ビルの人）の最後には、3となっていますね。これは、3回カウントされているということです。つまり、このデータにおいてAkira Moriさんは、2014年、2000年、1996年どの年度のときにも億万長者としてカウントされていたことを意味します。
+The year column has data of the three years, 2014 and 2000 and 1996. And, We can see Abigail Johnson has "(3)" in the name column. That is because he was counted three times. In other words, Abigail Johnson was counted as one of the billionaires in 2014 and 2000 and 1996 in this data.What we want to know is information about billionaires in Europe now. So, we need to delete other data except 2014's year.
 
-What we want to know is imformation about billionaires in Europe now. Then, when same people like Bill Gates were count many time, we can't analyze data precisely. So, we need to delete other data except 2014's year.
-
-In such case, in contrast to Excel which I need to find where function like filter are, Exploratory enables us to chose command from there or type code like SQL.
+In such case, in contrast to Excel which I need to find where function like a filter is, Exploratory enables us to chose command from there or type code like SQL.Grammer enables you to express anything you want, that's why we can talk/write. Time to learn Grammar for Data Analysis, not tools like Excel or Tabelow!
 
 ![](images/exploratory-command.png)
 
-Moreover, You can simply select command from the column header dropdown list, which will generate a command like below.
+Moreover, You can select the command from the column header dropdown list, which will generate a command like below.
 
 ![](images/command-builder.png)
 
-Let's select ‘Filter’ from the column header dropdown list, which will generate a command like below because we want to filtering 2014's data.
+Let's select ‘Filter’ from the column header dropdown list, which will generate a command like below because we want to filter 2014's data.
 
 ![](images/filter-20140.png)
 
@@ -128,18 +126,17 @@ Let's specify that year is 2014 and press Run button.
 
 ![](images/filter-2014.png)
 
-Then, we can see only 2014's data in Summary View and the number of name become 1 from 3.
+Then, we can see only 2014's data in Summary View and the number of names become one from three.
 
 In Chart View, we can intuitively understand data powered by visualization.
 
-Let's assign X axis to citizenship and color axis to gender. That is because we want to see graph of gender for each countries. Blue color represents female and orange color represents male.
+Let's assign X axis to citizenship and color axis to gender. That is because we want to see a graph of gender for each country. Blue color represents the female and orange color represents the male.
 
 ![](images/chart-billionaire2.png)
 
-There are many billionaires and the ratio of men is overwhelmingly higher than the ratio of women in United States.By only this steps, Exploratory can make the chart so that we can understand data.
+There are many billionaires and the ratio of men is overwhelmingly higher than the ratio of women in the United States. By only this steps, Exploratory can make the chart so that we can understand data.
 
-That is to say, Exploratory enable us to overview data easily and intuitively by just importing and realize mistake of data and fix it to analyze data.
-
+That is to say; Exploratory enable us to overview data easily and intuitively by just importing and realize the mistake of data and fix it to analyze data
 
 ###STEP 2: Caluculate the ratio of billionares for each countries
 
