@@ -1,23 +1,23 @@
 
-#Excel and Tabelow is dead. Billionares data analysis on Exploratory, UI for R — Is Europe women-friendly work environments true ?
+#Excel and Tabelow are dead. Billionaires data analysis on Exploratory, UI for R — Is Europe women-friendly work environments true ?
 
 
 ![](images/excel-difficult.png)
 
-Do you have any idea about this spreed sheet data ? I don't think so.
+Do you have any idea about this spread sheet data ?
 
-Actually, this is billionares data all over the world which I downloaded from Forbes.com.
+Actually, this is billionaires data all over the world which I downloaded from Forbes.com.
 
-Anyway, From what country are there the most people in that billionares? How come they become billionares ? Which are there more of, men or women?
+Anyway, I come up with a few questions about this data now. For example,
 
-As some articles which I recently read like below, Europe seems countries which have women-friendly work environments. If it is true, Has Europe many women billionares?
+1.Which country has the highest number billionaire ?
+2.How come they become billionaires ?
+3.Which are there more of, men or women?
+
+Moreover, as some articles which I recently read in Japanese, Europe seems countries which have women-friendly work environments. If it is true, Has Europe many women billionaires?
 
 
-![](images/europe-female.png)
-
-
-Do, we have a product called Exploratory which can solve such some questions easily by analyzing data for you. I'm in the project's team in Silicon Valley. I'm grateful for being surrounded by great people who make me want to be better self everyday. Exploratory Desktop provides an interactive and reproducible real data wrangling and analysis experience powered by R and visualization. In terms of technology, Exploratory provides interactive and reproducible environments for analyzing data by using NW.js (desctop application SDK on WebKit) and plotly.js on frontend of R.
-
+Do, we have a product called Exploratory which can solve such some questions easily and quickly by analyzing data for you. I'm in the project's team in Silicon Valley. I'm grateful for being surrounded by great people who make me want to be better self-everyday. Exploratory Desktop provides an interactive and reproducible real data wrangling and analysis experience powered by R and visualization.
 
 ![](images/exploratory.lp.png)
 
@@ -38,8 +38,6 @@ Here is many reactions around the world.
 
 
 ![](images/Exploratory-access.png)
-
-![](images/Exploratory-access2.png)
 
 
 ###Target Audience: Data Scientists who can do basic R or Python or People Who Know Just Enough R or SQL to Get by or Who are frustlating with Excel or Tabelow for analyzing data,
@@ -65,6 +63,10 @@ If you’re stuck, do any of the following:
 - Email me at hidetaka.koh@gmail.com.
 - Tweet me at [@SoccerKinki](https://twitter.com/SoccerKinki?lang=ja
 )
+
+####Preparing Data
+
+To demonstrate, I’m going to use billionaires data. I’ve shared it in EDF (Exploratory Data Format) [here]() so that you can quickly import with ‘Import Exploratory Data’ option. If you are interested in the original data you can download it from [here](https://www.dropbox.com/home?preview=Billionaires.xlsx) as well.
 
 ##Overview: Has Europe many women billionares?
 
@@ -94,10 +96,8 @@ You can import data. Dataset is [here](https://www.dropbox.com/home?preview=Bill
 ####Summary View
 
 ![](images/summary-billionaire.png)
-![](images/summary-billionaire2.png)
 
-
-Totally diffrent,right ? Thanks to Summary View, we can easily overview data which we can't recozinize in Excel data by importing. For example, this citizenship column represents the number of billionaires for each countries. As you can see, United States have the most billionaire all over the world. This selfmade column represents how come they become billionares. When you see gender column, you can understand men's billionaires is much more than women at first glance.
+Totally diffrent,right ? Thanks to Summary View, we can easily overview data which we can't recozinize data in Excel by importing. For example, this citizenship column represents the number of billionaires for each countries. As you can see, United States have the most billionaire all over the world. This selfmade column represents how come they become billionares. When you see gender column, you can understand men's billionaires is much more than women at first glance.
 
 
 But, we can't analyze data precisely with the way it is now.　Why not ?
@@ -283,7 +283,7 @@ This tutorial almost done. But, I want to show one more system for you. This is 
 Although this chart is pinned to the last blue step, Exploratory can automatically caluculate and vizualize the data when you update grouping step.
 
 
-##6. Sharing Chart in Reproducible and Collaborative Way
+##6. Sharing the Chart in Reproducible and Collaborative Way
 
 この発見を記録したり、シェアしたいと思いませんか？　Noteというボタンを押してみましょう。
 
