@@ -17,7 +17,7 @@ Anyway, you may come up with a few questions about this data now. For example,
 Moreover, as some articles which I recently read in Japanese, Europe seems countries which have women-friendly work environments. If it is true, Has Europe many women billionaires?
 
 
-Do, we have a product called Exploratory which can solve such some questions easily and quickly by analyzing data for you. I'm in the project's team in Silicon Valley. I'm grateful for being surrounded by great people who make me want to be better self-everyday. Exploratory Desktop provides an interactive and reproducible real data wrangling and analysis experience powered by R and visualization.
+Do, we have a product called Exploratory which can solve such some questions easily and quickly by analyzing data for you. I'm in this project's team in Silicon Valley. I'm grateful for being surrounded by great people who make me want to be better self-everyday. Exploratory Desktop provides an interactive and reproducible real data wrangling and analysis experience powered by R and visualization.
 
 ![](images/exploratory.lp.png)
 
@@ -53,11 +53,10 @@ Before I begin, I’d like to clarify who my target audience is.In this tutorial
 
 Anyway, let’s get started!
 
-###Time Estimate: 15 minutes
+###Time Estimate: 10 minutes
 
-If you go fast, this tutorial should take a bit over 10 minutes. If you go slow, it should take a bit over 15 minutes.
+If you go fast, this tutorial should take a bit over 5 minutes. If you go slow, it should take a bit over 10 minutes.
 
-If you’re stuck
 If you’re stuck, do any of the following:
 
 - Comment on the comment box at the very bottom of this page.
@@ -79,7 +78,6 @@ Let's reveal the question whether Europe women-friendly work environments are re
 - STEP 4: Is Europe women-friendly work environments real
 - STEP 5: One more thing
 - STEP 6: Sharing the Chart in Reproducible and Collaborative Way
-
 - Finally: Making the World Better for Working Women
 
 
@@ -89,7 +87,7 @@ First of all, you can create projects from here.
 
 ![](images/create-project.png)
 
-You can import data. The dataset is [here](https://www.dropbox.com/home?preview=Billionaires.xlsx). You can download.
+You can import data. The dataset is [here](https://www.dropbox.com/home?preview=Billionaires.xlsx). You can download it.
 
 ![](images/import.png)
 
@@ -110,7 +108,7 @@ Let's see year column and the name column.
 
 The year column has data of the three years, 2014 and 2000 and 1996. And, We can see Abigail Johnson has "(3)" in the name column. That is because he was counted three times. In other words, Abigail Johnson was counted as one of the billionaires in 2014 and 2000 and 1996 in this data.What we want to know is information about billionaires in Europe now. So, we need to delete other data except 2014's year.
 
-In such case, in contrast to Excel which I need to find where function like a filter is, Exploratory enables us to chose command from there or type code like SQL.Grammer enables you to express anything you want, that's why we can talk/write. Time to learn Grammar for Data Analysis, not tools like Excel or Tabelow!
+In such case, in contrast to Excel which I need to find where function like a filter is, Exploratory enables us to chose command from there or type code like SQL. Grammer enables you to express anything you want, that's why we can talk/write. Time to learn Grammar for Data Analysis, not tools like Excel or Tabelow!
 
 ![](images/exploratory-command.png)
 
@@ -136,7 +134,7 @@ Let's assign X axis to citizenship and color axis to gender. That is because we 
 
 There are many billionaires and the ratio of men is overwhelmingly higher than the ratio of women in the United States. By only this steps, Exploratory can make the chart so that we can understand data.
 
-That is to say; Exploratory enable us to overview data easily and intuitively by just importing and realize the mistake of data and fix it to analyze data
+That is to say; Exploratory enable us to overview data easily and intuitively by just importing and realize the mistake of data and fix it to analyze data.
 
 ###STEP 2: Caluculate the ratio of billionares for each countries
 
