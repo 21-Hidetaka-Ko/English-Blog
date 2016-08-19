@@ -66,11 +66,11 @@ If you’re stuck, do any of the following:
 
 ####Preparing Data
 
-To demonstrate, I’m going to use billionaires data. I’ve shared it in EDF (Exploratory Data Format) [here]() so that you can quickly import with ‘Import Exploratory Data’ option. If you are interested in the original data you can download it from [here](https://www.dropbox.com/home?preview=Billionaires.xlsx) as well.
+To demonstrate, I’m going to use billionaires data from Forbes.com. I’ve shared it in EDF (Exploratory Data Format) [here]() so that you can quickly import with ‘Import Exploratory Data’ option. If you are interested in the original data you can download it from [here](https://www.dropbox.com/home?preview=Billionaires.xlsx) as well.
 
 ##Overview: Has Europe many women billionaires?
 
-Let's reveal the question whether Europe women-friendly work environments are real or not by analyzing data for the introduction of Exploratory. After that, I state my impressions of data which I analyzed.
+Let's reveal the question whether Europe women-friendly work environments are real or not by analyzing data for the introduction of Exploratory. After that, I state my impressions about Making the World Better for Working Women.
 
 - STEP 1: Prepare Project before analyze
 - STEP 2: Calculate ratio of billionaires for each country
@@ -87,7 +87,7 @@ First of all, you can create projects from here.
 
 ![](images/create-project.png)
 
-You can import data. The dataset is [here](https://www.dropbox.com/home?preview=Billionaires.xlsx). You can download it.
+You can import data. The dataset is [here](https://www.dropbox.com/home?preview=Billionaires.xlsx) so that You can download it.
 
 ![](images/import.png)
 
@@ -132,65 +132,56 @@ Let's assign X axis to citizenship and color axis to gender. That is because we 
 
 ![](images/chart-billionaire2.png)
 
-There are many billionaires and the ratio of men is overwhelmingly higher than the ratio of women in the United States. By only this steps, Exploratory can make the chart so that we can understand data.
+There are many billionaires and the ratio of men is overwhelmingly higher than the number of women in the world. By only this steps, Exploratory can make the chart so that we can understand data.
 
-That is to say; Exploratory enable us to overview data easily and intuitively by just importing and realize the mistake of data and fix it to analyze data.
+That is to say; Exploratory enable us to overview data easily and intuitively by just importing and realize the issues of data and fix it to analyze data.
 
-###STEP 2: Caluculate the ratio of billionares for each countries
+That’s it for this step1! Not too bad, eh?
 
-Note that to answer the question which is "Has Europe many women billionares?", we have another problem. We don't know the ratio of billionares between man and woman for each countries because the height of each bar is diffrent.
+###STEP 2: Calculate the ratio of billionaires for each country
 
-That's why, We want to caluculate the ratio of woman billionares for each countries.
+Note that to answer the question which is "Has Europe many women billionaires?", We have another problem. We don't know the ratio of billionaires between man and woman for each country because the height of each bar is different.
 
-At First, We can quickly see the data as table like Excel by going to Table view.
+That's why We want to calculate the ratio of woman billionaires for each country
+
+At First, We can quickly see the data as the table like Excel by going to Table view.
 
 ![](images/table-billionaire.png)
 
 
-We can group citizenship and gender because we need to know the relationship between citizenship and gender by using 'group_by' command. You can construct this command from the column header menu like below. Click 'Group by' which will generate a command like below.
-
-![](images/command-builder2.png)
-
-Add 'gender' separating them by comma. Here is the final command we want to run.
+We can group citizenship and gender because we need to know the relationship between citizenship and gender by using 'group_by' command. You can construct this command from the column header menu. Click 'Group by' which will generate a command like below. Add 'gender' separating them by a comma. Here is the final command we want to run.
 
 `group_by(citizenship, gender)`
 
-![](images/command-builder3.png)
-
-You can confirm that citizenship and gender was grouped like below.
-
 ![](images/group_by-gender.png)
 
-Anyway, We need to divide each of the number of men and women by the total of men and women to calculate the ratio. That's why we want to create a column called 'count' which represents each of the number of men and women for each country. You can create new column and aggregate the data by using 'summerize' command.
+You can confirm that citizenship and gender were grouped like below.
 
+We need to divide each of the numbers of men and women by the total of men and women to calculate the ratio. That's why we want to create a column called 'count' which represents each of the numbers of males and females for each country. You can create the new column and aggregate the data by using 'summerize' command.
 
-To make the command line interface work effectively and easier for anyone We have ‘Context aware syntax suggestion’ which recommend a set of list for function or column because Exploratory Desktop always check which column or function is good in this context like below.
+To make the command line interface work easier for anyone We have Context aware syntax suggestion which recommends a set of a list for function or column because Exploratory Desktop always check which column or function is good in this context like below.
 
 So, you don't have to google the mean for functions which you don't know.
 
 ![](images/recommend-billionaire.png)
 
 
-For example, here you will see a set of ‘aggregate’ functions that can be used in ‘summarize()’ command. If you are not familiar with R, as you can see, this ‘all’ function can be used to return TRUE if the condition is satisfied for all the rows or a group of rows. You can use mean function in case of average or sum function in case of total.
+For example, here you will see a set of ‘aggregate’ functions that can be used in ‘summarize()’ command. If you are not familiar with R, as you can see, this ‘all’ function can be used to return TRUE if the condition is satisfied for all the rows or a group of rows. You can use the mean function in case of average or sum function in case of a total.
 
-This ‘Context aware syntax suggestion’ is actually a pretty powerful feature in Exploratory Desktop, please take a look at [this post](https://blog.exploratory.io/context-aware-syntax-suggestion-d52519c55cf8#.n83k4wes0
-) for the detail.
+This Context aware syntax suggestion is a pretty powerful feature in Exploratory Desktop. Please take a look at [this post](https://blog.exploratory.io/context-aware-syntax-suggestion-d52519c55cf8#.n83k4wes0) for the detail.
 
-
-By the way, let's use 'n' function because we want to count in this case.
-
+Let's use 'n' function because we want to count in this case.
 
 ![](images/summarize-billionaire.png)
 
 
-Look at Australia! They have 4 female and 25 male. To caluculate the ratio of woman, we need to divide 29 man and female by 4 female, don't we ? That's why let's make new column called total. To make new column, we can use 'mutate'. Why do I need to use 'mutate', not summerize like previous case in this case. I have an answer for you. The difference is when we aggregate many row in case of summerize and make new column with same row in case of mutate.
+Look at Australia! They have four female and 25 male. To calculate the ratio of the woman, we need to divide 29 men and female by four women, don't we? Let's make a new column called total. To make a new column, we can use 'mutate'. Why do I need to use 'mutate', not 'summerize' like the previous case in this case? I have an answer for you. The difference is when we aggregate many rows in case of 'summerize' and make a new column with the same row in case of 'mutate'.
 
-
-Let's 'mutate' commmand in this case because we want to left each row. And, we can use 'sum' function to caluculate total.
+Let's 'mutate' command in this case because we want to left each row. And, we can use 'sum' function to calculate a total.
 
 ![](images/total-billionaire.png)
 
-Let's create the ratio column because we can create total column. When we divide count column by total, we can caluculate the ratio.
+Let's create the ratio column because we can create the total column. When we divide count column by total, we can calculate the ratio.
 
 ![](images/ratio-billionaire.png)
 
@@ -202,7 +193,7 @@ That's why we understand Men and women of the ratio of the billionaire in each o
 
 13% of Billionaires is women and 86% of Billionaires is Men in Australia.
 
-###3. Remove outliers
+###STEP 3:Remove outliers
 
 Let's go to chart view to understand data more intuitively by visualization.
 
@@ -212,21 +203,19 @@ Let's assign citizenship to X-axis and ratio to Y-axis and gender to color-axis.
 
 the highest female billionaire ratio is Angola as you can see.
 
-Then, Do you say that Angola is country that have the highest female billionaire ratio all over the world ?
+Then, Do you say that Angola is the country that has the highest female billionaire ratio all over the world?
 
-Let's go to Table view to understand situation.
+Let's go to Table view to demystifying a situation.
 
 ![](images/angola.png)
 
-
-Total number of billionaires in Angola is only 1 and woman. In other words, There is not enough peripheral data because the number of population is too small. So, Let's filter the number of population.
+A total number of billionaires and woman in Angola is only 1. In other words, There is not enough peripheral data because the number of population is too small. So, Let's filter the number of population.
 
 ![](images/filter-total.png)
 
+There is only countries which have more than five the number of the population like above.
 
-There is only countries which have more than 5 the number of population like above.
-
-###4. Conculsion: Is Europe women-friendly work environments true ?
+###STEP 4:Conculsion: Is Europe women-friendly work environments true ?
 
 Let's go to chart view to understand data more intuitively by visualization.
 
