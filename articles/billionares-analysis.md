@@ -215,20 +215,20 @@ A total number of billionaires and woman in Angola is only 1. In other words, Th
 
 There is only countries which have more than five the number of the population like above.
 
-###STEP 4:Conculsion: Is Europe women-friendly work environments true ?
+###STEP 4:Conclusion: Is Europe women-friendly work environments true?
 
-Let's go to chart view to understand data more intuitively by visualization.
+Let's go to viz to understanding data more intuitively by visualization.
 
 ![](images/chart-billionaire4.png)
 
 High female billionaire ratio countries are European like Chile, Switzerland, Holland, Peru, Germany, France, Denmark as you can see.
 
-Do you remember selfmade column that means how come they become billionares as I told before ? By using this column, let's see the diffrence between by income and by myself. So, I want to come back Filter step which assigned year at first.
+Do you remember a self-made column that means how come they become billionaires as I told before? By using this column, let's see the difference between by inherited and by self-made. So, I want to come back Filter step which assigned year at first.
 
 ![](images/filter-selfmade.png)
 
 
-Oh... When I back to filter step, Ratio in Y-axis come off and chart is diffrent from previous one. That is because ratio column doesn't exist at the time of filter step which is blue. That's why Pin button is here for this problem.
+Oh... When I back to filter step, Ratio in Y-axis come off and the chart is different from the previous one. That is because ratio column doesn't exist at the time of filter step which has blue border. That's why Pin button is here for such problem.
 
 ![](images/pin-billionaire.png)
 
@@ -238,53 +238,76 @@ When you click the Pin button, the part which you filter in the last became blue
 ![](images/pin-billionaire2.png)
 
 
-Although we change the step now, we can update the past step while fixxing the chart to this blue step because I Pin this step. Then, let's filter only billionares by income.
+Although we change the step now, we can update the past step while fixing the chart to this blue step because I Pin this step. Then, let's filter only billionaires by inherited
 
 ![](images/filter-inherited.png)
 
-Women of billionaire many countries by income are European countries like Australia, Chile, France, Germany, Spain, Sweaden, Switzerland as you can see.
+European countries like Australia, Chile, France, Germany, Spain, Sweden, Switzerland, has a large number of woman billionaires by inherited as you can see.
 
 
-And, let's filter only billionares by selfmade.
+And, let's filter only billionaires by self-made.
 
 
 ![](images/filter-selfmade2.png)
 
 
-Wow! Many countries decrease suddenly. That is really interesting! Women of billionaire many countries by selfmade are only US and Switzerland. Many European countries like France and Geramany decrease now.
+Wow! Many countries decrease suddenly. That is interesting! The only United States and Switzerland has a large number of woman billionaires by self-made as you can see. Many European countries like France and Germany decrease now.
+
+In conclusion, of course, the number of the female billionaire in Europe is many compared to other nations. But, this is the critical thing, Many of female billionaire are in Europe is by inherited. There are less of the woman billionaire in Europe by self-made. That's why Europe women-friendly work environments are not necessarily right.
 
 
-In conclusion, of course the number of woman of billionaire in Europe is many compared to other countries. But, this is critical thing, Many of women of billionaireis in Europe is by income. There are less of woman of billionaireis in Europe is by selfmade. That's why Europe women-friendly work environments is not necessary true.
+
+###STEP 5: One more thing
 
 
-##5. One more thing
-
-
-This tutorial almost done. But, I want to show one more system for you. This is really interesting in term of technical point. And, you will understand why right step is.Although we can see the ratio per gender, in the next step, why don't see the ratio per industry ? Then, you can see by back to step for grouping and change just one command. So, let's go the step!
+This tutorial is almost done. But, I want to show one more system for you. This is interesting in term of the technical point. And, you will understand why the right step is. Although we can see the ratio per gender, in the next step, why don't see the rate per industry? Then, you can see by back to step for grouping and change just one command. So, let's go the step!
 
 ![](images/onemorething-billionaire.png)
 
-Although this chart is pinned to the last blue step, Exploratory can automatically caluculate and vizualize the data when you update grouping step.
+Although this chart is Pinned to the last blue step, Exploratory can automatically calculate and visualize the data when you update grouping step.
 
 
-##6. Sharing the Chart in Reproducible and Collaborative Way
+###STEP 6: Sharing the Chart in Reproducible and Collaborative Way
 
-この発見を記録したり、シェアしたいと思いませんか？　Noteというボタンを押してみましょう。
+####Chart with Data Provenance
+
+One of the most frustraing thing about data visualization comes from the power it carries. It can be used to communicate ‘message’ super effectively and quickly regardless of the intention behind the message, therefore if we are not careful, it can fool us easily. And the bad news is, the world is filled with ‘irresponsible’ visualizations.
+
+This is why I’m personally super excited to announce that we have introduced Chart Sharing with Data Steps with our latest Exploratory Desktop With which, not only can you share your chart with others but also publish it with the data wrangling steps so that others can quickly see how the data was prepared. And even better, others can download it, import into Exploratory, and review and evaluate each step of the data preparation interactively. What if someone doesn’t have Exploratory Desktop? Well, you can find an R script on the shared page so that you can reproduce the data in an standalone R environment!
+
+Once you have got a chart you want to share with others, you can click on ‘Share’ button.
 
 ![](images/note-billionaire.png)
+
+Inside the dialog you can type Title, Description, and Data Source information. And, you can keep the ‘Share with data’ checkbox checked’ if you like to do so. This will publish your chart with the data preparation steps.
+
+
 ![](images/note.png)
+
+Once you click ‘Share’ button you will see an URL being generated. You can simply click ‘View Shared Chart’ link to open the published page.
+
 ![](images/note-publish_before.png)
+
+You can find your chart is now published at [Exploratory Cloud](https://exploratory.io/viz/Hidetaka-Ko/118ab43cf452?cb=1471658236737).
+
 ![](images/note-publish.png)
 
+Now, from here, your audience can go to Data view to see not only the underlying data but also the steps it took to prepare the data.
 
-こんなふうにブログを書く感覚で簡単にデータ分析のレポートを書くことができます。データ分析するだけじゃなくて、他の仲間にも簡単にシェアすることもできます。
+![](images/data-view.png)
+
+Or, if your audience prefers, they can see the ‘easy-to-read’ dplyr chain of the commands in R script view.
+
+![](images/rscript-view.png)
+
+the real power of ‘Sharing Chart with Data and Steps’ becomes obvious when your audience download and import it into their Exploratory Desktop environment.
+
 
 ##Excel is dead. Why Exploratory is Exploratory?
 
-この最初からの一連のステップをExcelですることを想像できるでしょうか？笑
+Can you imagine you can do this process from the beginning by Excel?
 
-The reason we at Exploratory get up every morning being excited is because we have a chance to address this decades old (if not hundreds) challenge that is slowing down our society to progress. We want Exploratory Desktop to be an environment where we can focus on analyzing the data, asking questions about the data, and wrangling with the data to explore possible answers, without much worrying about the processes or how to make it reproducible for later use. And of course, we want Exploratory Desktop to take care of making all the exploratory works reproducible behind the scene just in case we might need it later!
-
+We want Exploratory Desktop to be an environment where we can focus on analyzing the data, asking questions about the data, and wrangling with the data to explore possible answers, without much worrying about the processes or how to make it reproducible for later use. And of course, we want Exploratory Desktop to take care of making all the exploratory works reproducible behind the scene just in case we might need it later!
 
 
 ##7. Making the World Better for Working Women
@@ -311,33 +334,6 @@ It’s challenging to be a working woman in Japan, my home country, too. The Eco
 
 
 社会的に恵まれている人たちの中でも、実力主義を宗教のように信じている人たちは、実力の劣る人たちを見て「努力不足だ」と蔑むことはしても、男女の問題など、その後ろにある社会の不平等に気付かないことが多い気がします。完全な実力主義社会など存在しないことを、忘れてはいけません。
-
-
-
-
-
-
-
-
-
-
-
-####FAQ
-
-- 今回は、棒グラフしか使いませんでしたが、棒グラフ以外のグラフタイプもサポートしています。
-![](images/several-chart.png)
-
-- 今回は、ローカルのファイルをインポートしてきて分析しましたが、以下のように、GitHub、Google Analytics、Google Spread sheet、Mongo DB、MySQL、JSON REST APIなどのたくさんのデータベースから本当に簡単にデータをインポートしてきて分析することも可能です。
-
-![](images/several-importdatabase.png)
-
-![](images/several-importdatabase2.png)
-
-
-
-- 今回は使いませんでしたが、このソフトウェアはプログラミング言語「R」の上に開発されているので、使うコマンドや関数はRとほとんど同じになります。Rでできることは全てできます。Rは数学系のライブラリが充実しているので、クラスタリングやコホート分析や決定木分析などのような高度な統計や数学を応用してデータを分析していくことも可能です。
-
-![](images/flight-stats27.png)
 
 
 ##Beta invitation is open
