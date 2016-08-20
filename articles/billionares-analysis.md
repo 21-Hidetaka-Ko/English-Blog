@@ -260,7 +260,7 @@ In conclusion, of course, the number of the female billionaire in Europe is many
 ###STEP 5: One more thing
 
 
-This tutorial is almost done. But, I want to show one more system for you. This is interesting in term of the technical point. And, you will understand why the right step is. Although we can see the ratio per gender, in the next step, why don't see the rate per industry? Then, you can see by back to step for grouping and change just one command. So, let's go the step!
+This tutorial is almost done. But, I want to show one more thing for you. This is interesting in term of the technical point. And, you will understand why the right step is. Although we can see the ratio per gender, in the next step, why don't see the rate per industry? Then, you can see by back to step for grouping and change just one command. So, let's go the step!
 
 ![](images/onemorething-billionaire.png)
 
