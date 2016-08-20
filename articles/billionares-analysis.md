@@ -302,6 +302,13 @@ Or, if your audience prefers, they can see the ‘easy-to-read’ dplyr chain of
 
 the real power of ‘Sharing Chart with Data and Steps’ becomes obvious when your audience download and import it into their Exploratory Desktop environment.
 
+###Interactive Chart Sharing and Embedding
+
+Medium is a great micro blogging platform where you can share your contents quickly. And you can share your chart as well. Very simple, you just copy and paste the chart URL like below.
+
+[here](https://exploratory.io/viz/Hidetaka-Ko/118ab43cf452?cb=1471658236737)
+
+You can do same thing in Slack, Wordpress, Twitter, Facebook, Tumbler,too.
 
 ##Excel is dead. Why Exploratory is Exploratory?
 
@@ -310,31 +317,30 @@ Can you imagine you can do this process from the beginning by Excel?
 We want Exploratory Desktop to be an environment where we can focus on analyzing the data, asking questions about the data, and wrangling with the data to explore possible answers, without much worrying about the processes or how to make it reproducible for later use. And of course, we want Exploratory Desktop to take care of making all the exploratory works reproducible behind the scene just in case we might need it later!
 
 
-##7. Making the World Better for Working Women
-
-留学先である、人材の流動性が高いシリコンバレーは実力主義のイメージが強いですが、仮にそうだとすると、次のデータはどう説明すればいいのでしょうか。[ソース](https://medium.com/diversify-tech/i-m-a-white-guy-in-silicon-valley-and-i-m-done-buying-the-meritocracy-myth-2cc0ef9f9b60#.lql629j9y)
-
-1. シリコンバレーのトップ企業の管理職は78%が男性
-2. エンジニアは85%が男性
-3. 取締役レベルだと89%が男性
-4. CEOレベルだと93%が男性
-5. ベンチャー投資家だと96%が男性　
+##Making the World Better for Working Women
 
 
-「シリコンバレー = 実力が全ての世界」とするのであれば、このデータからは「男性の実力 > 女性の実力」と結論付けるしかありません。だが実際には、シリコンバレーは男社会で(日本ほどではありませんが)、女性はキャリア面でハンデを負っています。
+How about Silicon Valley? Silicon Valley which has highly mobile human resources is famous for the merit system. If it is true, Can you explain about below data?
+
+1. 85% of high-tech jobs in Bay Area tech companies are held by men
+2. 89% of Bay Area executives are men (National average is 84%)
+3. 93% of Bay Area CEOs are men
+4. 96% of Bay Area VCs are men
+
+[Data source](https://medium.com/diversify-tech/i-m-a-white-guy-in-silicon-valley-and-i-m-done-buying-the-meritocracy-myth-2cc0ef9f9b60#.lql629j9y)
 
 
-だから、ぼくの留学先であるシリコンバレーでは、女性エンジニアが少ないから、女性エンジニアを増やそうという動きが出てきています。ついこないだ、女性のコンピュータサイエンス教育によってジェンダーギャップを失くそうとしている[She++](http://www.sheplusplus.org/
-)という団体がスタンフォード大学でカンファレンス的なのをしていたので見に行ったりしてました。They insisted “Maybe Womand don’t want to fall behind in their career when they’re pregnant. But She++ think learning to code is so much more practical. You can work remotely as a programmer too, while raising a kid.”
+If you believe that the equation Silicon Valley = The perfect merit system held true, we have no choice but to conclude that Merit of men > Merit of women from this data. But, in fact, it is not true. Silicon Valley is man society. Women are owed ​​a handicap at the carrier.
+
+
+So, There are many activities like [She++](http://www.sheplusplus.org/) to increase the number of the female engineer in Silicon Vally. I took part in their conference. They insisted “Maybe Woman don’t want to fall behind in their career when they’re pregnant. But She++ think learning to code is so much more practical. You can work remotely as a programmer too, while raising a kid.”
 
 
 ![](images/she++.png)
 
 It’s challenging to be a working woman in Japan, my home country, too. The Economist recently presented their “glass-ceiling index,” which placed Japan among OECD countries with the largest gender gaps in their workplaces. For many Japanese women, returning to the workplace after having a child is often an insurmountable task. Japan should learn from She++, I think.
 
-
-社会的に恵まれている人たちの中でも、実力主義を宗教のように信じている人たちは、実力の劣る人たちを見て「努力不足だ」と蔑むことはしても、男女の問題など、その後ろにある社会の不平等に気付かないことが多い気がします。完全な実力主義社会など存在しないことを、忘れてはいけません。
-
+Although people who belive the perfect merit system like religion among the people who are well-to-do despise the people with poor skills because they are the result of lack of effort, they can't realize Inequality of society in the behind like gender gap. Please don't forget that there is no such complete meritocracy society. If you can not believe my opinion, I recommend you to look at data. I’m sure you can get a new way of thinking by looking data.
 
 ##Beta invitation is open
 
